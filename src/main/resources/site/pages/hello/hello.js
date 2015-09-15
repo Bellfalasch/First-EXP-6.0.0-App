@@ -1,6 +1,6 @@
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
-var contentSvc = require('/lib/xp/content'); // Import the content service functions
 var portal = require('/lib/xp/portal'); // Import the portal functions
+var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
+var contentLib = require('/lib/xp/content'); // Import the content service functions
 
 //var util = require('/lib/utilities'); // My own extension functions
 var UTIL = require('/lib/util/js/util.js'); // Included by gradle.build
@@ -19,7 +19,7 @@ exports.get = function(req) {
     var subMenus = [];
     var siteContent = model.site; // portal.getSite() needs to be called already
 
-    var children = contentSvc.getChildren({
+    var children = contentLib.getChildren({
         key: siteContent._id,
         count: 100
     });
@@ -47,7 +47,7 @@ exports.get = function(req) {
 //    util.log(model.content);
 
     // Get all the country contents
-    var result = contentSvc.query({
+    var result = contentLib.query({
         start: 0,
         count: 100,
         contentTypes: [
