@@ -1,6 +1,6 @@
 var portal = require('/lib/xp/portal'); // Import the portal functions
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
-var lib = require('/lib/xp/content');
+//var contentLib = require('/lib/xp/content');
 var util = require('/lib/utilities'); // My own extension functions
 
 // Handle the GET request
@@ -14,7 +14,7 @@ exports.get = function(req) {
 //	util.log(component);
 
 	var content = component.config;
-		
+
 	var imageUrl = null;
 
 	// Get the true image URL (only the ID to it is stored in Enonic)
