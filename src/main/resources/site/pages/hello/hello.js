@@ -55,7 +55,7 @@ exports.get = function(req) {
         ]
     });
 
-    var contents = result.contents;
+    var contents = result.hits;
     var countries = new Array();
 
 //	util.log(app.name);

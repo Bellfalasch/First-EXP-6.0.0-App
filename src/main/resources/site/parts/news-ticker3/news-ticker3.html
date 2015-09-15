@@ -1,5 +1,5 @@
 <div class="news-ticker">
-	<div class="ticker-item" data-th-each="ticker : ${content.contents}">
+	<div class="ticker-item" data-th-each="ticker : ${content.hits}">
 	    <h3 data-th-text="${ticker.displayName}"></h3>
 	    <p data-th-text="${ticker.data.preface}"></p>
 	</div>

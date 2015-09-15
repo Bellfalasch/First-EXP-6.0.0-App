@@ -17,7 +17,7 @@ exports.get = function(req) {
     var result = contentLib.getChildren({
         key: portal.getContent()._id
     });
-    var contents = result.contents;
+    var contents = result.hits;
 
     var cities = new Array();
 
@@ -25,7 +25,7 @@ exports.get = function(req) {
         googleMaps += '<script>function initialize() {';
 
         // Loop through the contents and extract the needed data
-        for(var i = 0; i < contents.length; i++) {
+        for (var i = 0; i < contents.length; i++) {
 
             var city = {};
             city.name = contents[i].displayName;
