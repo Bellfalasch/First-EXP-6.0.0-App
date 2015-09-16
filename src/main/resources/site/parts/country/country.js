@@ -14,12 +14,18 @@ exports.get = function(req) {
     var description = content.data.description;
     var population = content.data.population;
 
+    // From Task: TML
+    var html = portal.processHtml({
+        value: content.data.html
+    });
+
     // Prepare the model object that will be passed to the view file
     var model = {
         name: name,
         description: description,
         population: population,
-        data: content.data
+        data: content.data,
+        html: html
     };
 
     // Specify the view file to use
