@@ -1,7 +1,5 @@
 var portal = require('/lib/xp/portal'); // Import the portal functions
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
-//var contentLib = require('/lib/xp/content');
-var util = require('/lib/utilities'); // My own extension functions
 
 // Handle the GET request
 exports.get = function(req) {
@@ -10,8 +8,6 @@ exports.get = function(req) {
 
 	// Find the current component from request
 	var component = portal.getComponent();
-
-//	util.log(component);
 
 	var content = component.config;
 
@@ -32,8 +28,11 @@ exports.get = function(req) {
     // Specify the view file to use
     var view = resolve('images1b.html');
 
+    // Render the dynamic HTML with values from the model
+    var body = thymeleaf.render(view, model);
+
     // Return the response object
     return {
-        body: thymeleaf.render(view, model)
-    }
+        body: body
+    };
 };

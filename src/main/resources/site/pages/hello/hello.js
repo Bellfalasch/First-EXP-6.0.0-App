@@ -1,8 +1,6 @@
 var portal = require('/lib/xp/portal'); // Import the portal functions
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
 var contentLib = require('/lib/xp/content'); // Import the content service functions
-
-//var util = require('/lib/utilities'); // My own extension functions
 var UTIL = require('/lib/util/js/util.js'); // Included by gradle.build
 
 // Handle the GET request
@@ -14,7 +12,7 @@ exports.get = function(req) {
     //model.menuItems = lib.menu.getMenu(1);
     model.menuItems = UTIL.menu.get(2);
 
-    // START MENUITEM CODE
+    // START MENUITEM CODE - the manual way
 /*
     var subMenus = [];
     var siteContent = model.site; // portal.getSite() needs to be called already

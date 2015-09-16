@@ -1,7 +1,7 @@
-var portal = require('/lib/xp/portal'); // Import the portal functions
-var thymeleaf = require('/lib/xp/thymeleaf'); // Import the Thymeleaf rendering function
+var portal = require('/lib/xp/portal');
+var thymeleaf = require('/lib/xp/thymeleaf');
 var contentLib = require('/lib/xp/content');
-var util = require('/lib/utilities'); // My own extension functions
+var UTIL = require('/lib/util/js/util.js');
 
 // Handle the GET request
 exports.get = function(req) {
@@ -17,13 +17,16 @@ exports.get = function(req) {
 
 	model.content = result;
 
-//	util.log(result);
+	UTIL.log(result);
 
     // Specify the view file to use
     var view = resolve('news-ticker3.html');
 
+    // Render the dynamic HTML with values from the model
+    var body = thymeleaf.render(view, model);
+
     // Return the response object
     return {
-        body: thymeleaf.render(view, model)
-    }
+        body: body
+    };
 };
