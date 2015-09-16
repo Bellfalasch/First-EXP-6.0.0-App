@@ -8,30 +8,31 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.enonic.xp:gradle-plugin:6.0.0-RC1'
+        classpath 'com.enonic.xp:gradle-plugin:6.0.0'
     }
 }
 
 apply plugin: 'com.enonic.xp.app'
 
-version = '1.0.0-SNAPSHOT'
+version = '1.0.0'
 
 app {
-    name = 'com.company.myapp'
-    displayName = 'MyApp'
+    name = 'com.enonic.training'
+    displayName = 'Training App (complete)'
     vendorName = 'Enonic AS'
     vendorUrl = 'http://enonic.com'
 }
 
 dependencies {
-    compile 'com.enonic.xp:core-api:6.0.0-RC1'
-    compile 'com.enonic.xp:portal-api:6.0.0-RC1'
-    include 'com.enonic.xp:lib-portal:6.0.0-RC1'
-    include 'com.enonic.xp:lib-thymeleaf:6.0.0-RC1'
-    include 'com.enonic.xp:lib-xslt:6.0.0-RC1'
-    include 'com.enonic.xp:lib-mustache:6.0.0-RC1'
-    include 'com.enonic.xp:lib-i18n:6.0.0-RC1'
-    include 'com.enonic.lib:util:0.0.8' // Add Util Lib on deploy time
+    compile 'com.enonic.xp:core-api:6.0.0'
+    compile 'com.enonic.xp:portal-api:6.0.0'
+    include 'com.enonic.xp:lib-portal:6.0.0'
+    include 'com.enonic.xp:lib-thymeleaf:6.0.0'
+    include 'com.enonic.xp:lib-xslt:6.0.0'
+    include 'com.enonic.xp:lib-mustache:6.0.0'
+    include 'com.enonic.xp:lib-i18n:6.0.0'
+    include 'com.enonic.lib:util:1.0.0' // Add Util Lib on "gradle deploy"
+    include 'com.enonic.lib:menu:1.0.0' // Add Menu Lib
 }
 
 repositories {
