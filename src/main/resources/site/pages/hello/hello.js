@@ -1,7 +1,7 @@
 var portal = require('/lib/xp/portal'); // Import the portal functions
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
 var contentLib = require('/lib/xp/content'); // Import the content service functions
-var UTIL = require('/lib/util/js/util.js'); // Included by gradle.build
+var UTIL = require('/lib/util/js/util.js'); // Nice to have functionality, included in gradle.build
 
 // Handle the GET request
 exports.get = function(req) {
@@ -9,7 +9,6 @@ exports.get = function(req) {
 
     model.site = portal.getSite();
 
-    //model.menuItems = lib.menu.getMenu(1);
     model.menuItems = UTIL.menu.get(2);
 
     // START MENUITEM CODE - the manual way
@@ -41,9 +40,6 @@ exports.get = function(req) {
 
     model.content = portal.getContent();
 
-//    util.log(model.site);
-//    util.log(model.content);
-
     // Get all the country contents
     var result = contentLib.query({
         start: 0,
@@ -55,8 +51,6 @@ exports.get = function(req) {
 
     var contents = result.hits;
     var countries = new Array();
-
-//	util.log(app.name);
 
     // Loop through the contents and extract the needed data
     for(var i = 0; i < contents.length; i++) {
