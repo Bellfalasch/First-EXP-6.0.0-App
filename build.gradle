@@ -38,7 +38,7 @@ dependencies {
 
 repositories {
     mavenLocal()
-    mavenCentral()
+    jcenter()
     maven {
         url 'http://repo.enonic.com/public'
     }
