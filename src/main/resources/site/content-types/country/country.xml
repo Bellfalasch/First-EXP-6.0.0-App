@@ -10,7 +10,16 @@
       <label>Population</label>
       <occurrences minimum="0" maximum="1"/>
     </input>
-    <!-- From Task - RadioButtons -->
+    <!-- From Task - RadioButtons, part 1 --><!--
+    <input name="name" type="RadioButton">
+      <label>Radio Buttons</label>
+      <occurrences minimum="0" maximum="0"/>
+      <config>
+        <option value="one">Option One</option>
+        <option value="two">Option Two</option>
+      </config>
+    </input>-->
+    <!-- From Task - RadioButtons, part 2 -->
     <input name="continent" type="RadioButton">
         <label>Continent</label>
         <occurrences minimum="0" maximum="0"/>

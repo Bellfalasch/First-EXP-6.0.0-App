@@ -3,11 +3,21 @@
     <div data-th-if="${population}" data-th-text="'Population: ' + ${population}"></div>
     <div data-th-if="${description}" data-th-text="${description}"></div>
 
-    <p data-th-if="${data.eu == 'yes'}">
-    	<strong>Medlem i EU!</strong>
+	<!-- From Task: RadioButtons, part 1 -->
+	<!-- <p data-th-text="${data.name}" /> -->
+
+	<!-- From Task: RadioButtons, part 2 -->
+    <p>
+    	Continent: <strong data-th-text="${data.continent}">Unknown</strong>
+	</p>
+	<!-- From Task: RadioButtons, part 3 -->
+    <p data-th-if="${data.continent == 'europe'}">
+    	<strong>This country is not far away!</strong>
 	</p>
 
+	<!-- From Task: HTML -->
     <article data-th-if="${data.html != ''}">
     	<div data-th-utext="${data.html}" data-th-remove="tag" />
 	</article>
+
 </div>
