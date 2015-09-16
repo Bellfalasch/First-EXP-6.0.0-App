@@ -14,7 +14,7 @@ exports.get = function(req) {
     var description = content.data.description;
     var population = content.data.population;
 
-    // From Task: TML
+    // From Task: HTML
     var html = portal.processHtml({
         value: content.data.html
     });
@@ -24,8 +24,8 @@ exports.get = function(req) {
         name: name,
         description: description,
         population: population,
-        data: content.data,
-        html: html
+        data: content.data, // From Task: RadioButtons
+        html: html // From Task: HTML
     };
 
     // Specify the view file to use
