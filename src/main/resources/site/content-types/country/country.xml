@@ -11,14 +11,14 @@
       <occurrences minimum="0" maximum="1"/>
     </input>
     <!-- From Task - RadioButtons -->
-	  <input name="continent" type="RadioButton">
-	  	<label>Continent</label>
-	  	<occurrences minimum="0" maximum="0"/>
-		  <config>
-		  	<option value="europe">Europe</option>
-		  	<option value="america">America</option>
-		  </config>
-	  </input>
+    <input name="continent" type="RadioButton">
+        <label>Continent</label>
+        <occurrences minimum="0" maximum="0"/>
+        <config>
+            <option value="europe">Europe</option>
+            <option value="america">America</option>
+        </config>
+    </input>
     <!-- From Task - HTML -->
     <input type="HtmlArea" name="html">
       <label>Some html</label>
