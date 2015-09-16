@@ -1,11 +1,14 @@
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
+var UTIL = require('/lib/util/js/util.js'); // From Task
 
 // Handle the GET request
 exports.get = function(req) {
 
     // Get the country content and extract the needed data from the JSON
     var content = portal.getContent();
+
+    UTIL.log(content); // From Task
 
     var name = content.displayName;
     var description = content.data.description;
