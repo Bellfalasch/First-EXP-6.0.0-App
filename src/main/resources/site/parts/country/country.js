@@ -1,6 +1,6 @@
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
-var UTIL = require('/lib/util/js/util.js'); // From Task
+var UTIL = require('/lib/enonic/util/util'); // From Task
 
 // Handle the GET request
 exports.get = function(req) {
