@@ -10,18 +10,19 @@
       <label>Population</label>
       <occurrences minimum="0" maximum="1"/>
     </input>
-    <!-- Try HTML and RadioButton -->
+    <!-- From Task - RadioButtons -->
+	  <input name="continent" type="RadioButton">
+	  	<label>Continent</label>
+	  	<occurrences minimum="0" maximum="0"/>
+		  <config>
+		  	<option value="europe">Europe</option>
+		  	<option value="america">America</option>
+		  </config>
+	  </input>
+    <!-- From Task - HTML -->
     <input type="HtmlArea" name="html">
       <label>Some html</label>
       <occurrences minimum="0" maximum="1"/>
-    </input>
-    <input type="RadioButton" name="eu">
-      <label>Member of the EU</label>
-      <occurrences minimum="1" maximum="1"/>
-      <config>
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </config>
     </input>
   </form>
 </content-type>
