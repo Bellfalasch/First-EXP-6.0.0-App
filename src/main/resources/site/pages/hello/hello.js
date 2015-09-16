@@ -1,7 +1,8 @@
 var portal = require('/lib/xp/portal'); // Import the portal functions
 var thymeleaf = require('/lib/xp/thymeleaf'); // Import the thymeleaf render function
 var contentLib = require('/lib/xp/content'); // Import the content service functions
-var UTIL = require('/lib/util/js/util.js'); // Nice to have functionality, included in gradle.build
+
+var UTIL = require('/lib/enonic/util/util'); // Nice to have functionality, included in gradle.build
 
 // Handle the GET request
 exports.get = function(req) {
@@ -48,6 +49,8 @@ exports.get = function(req) {
             app.name + ':country'
         ]
     });
+
+    UTIL.log(result); // From Task
 
     var contents = result.hits;
     var countries = new Array();
