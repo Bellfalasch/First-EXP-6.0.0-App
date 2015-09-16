@@ -2,41 +2,8 @@
 <html>
 <head>
     <title>Hello world</title>
-    <style>
-	    ol {
-	    	overflow: hidden;
-	    }
-		ol li {
-			float: left;
-			display: inline-block;
-			margin: 0 10px;
-		}
-    </style>
 </head>
 <body data-portal-component-type="page">
-
-	<!--/* START Menu */-->
-	<header role="banner">
-
-	    <nav class="site-nav nav" aria-expanded="false" aria-labelledby="toggle-menu" role="navigation">
-	        <ul class="site-nav__list">
-	            <li data-th-each="menuItem : ${menuItems}">
-	                <a href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
-	                   data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"
-	                   data-th-class="${menuItem.path == currentPath ? 'active' : ''}">Page title</a>
-	                <ul data-th-if="${menuItem.hasChildren}" class="menu-level-2">
-	                    <li data-th-each="submenuItem : ${menuItem.children}">
-	                        <a href="#" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
-	                           data-th-text="${submenuItem.menuName} ?: ${submenuItem.displayName}"
-	                           data-th-class="${submenuItem.path == currentPath ? 'active' : ''}">Page title</a>
-	                    </li>
-	                </ul>
-	            </li>
-	        </ul>
-	    </nav>
-	</header>
-	<!--/* END Menu */-->
-
     <h1>Hello world</h1>
     <h2>Countries</h2>
     <ul>
